@@ -1,0 +1,4 @@
+question_id,question_text,expected_category,golden_answer,model_answer,pass_fail
+1,What's the phone number for the Kozhikode cyber cell?,hyperlocal,"Kozhikode Cyber Cell – +91-495-XXXXXXX. Visit the nearest police station or file a complaint at cybercrime.gov.in.",,
+2,How do I report identity theft?,legal,"Report to your local cyber cell and file a complaint on cybercrime.gov.in. Preserve all evidence.",,
+3,I got a Telegram job offer asking for a fee. Is it a scam?,scenario,"Yes. Never pay any processing fee. Report it to the cyber cell.",,
