@@ -10,5 +10,5 @@ __pycache__/
 .idea/
 
 # ML Models & Indexes
-*.pkl
-faiss_index/
+
+
