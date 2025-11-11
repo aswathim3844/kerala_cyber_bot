@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kerala Cyber Law Assistant 🤖</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <h2>About This Project</h2>
+        <p>Hybrid Classifier-RAG bot for hyperlocal cybercrime help in Kerala.</p>
+        <p><strong>Team:</strong> Person A, B, C, D</p>
+    </aside>
+
+    <main class="chat-area">
+        <h1>Kerala Cyber Law Assistant 🤖</h1>
+        <div class="disclaimer">
+            DISCLAIMER: I am not a lawyer. This is not legal advice. For urgent help, call 1930 for financial fraud or visit
+            <a href="https://cybercrime.gov.in" target="_blank">cybercrime.gov.in</a>.
+        </div>
+
+        <div class="chat-box" id="chat-box">
+            {% for entry in chat_history %}
+                <div class="message user"><span>🧑 {{ entry.user }}</span></div>
+                <div class="message bot"><span>🤖 {{ entry.bot }}</span></div>
+            {% endfor %}
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="How can I help you?" autofocus>
+            <button onclick="sendMessage()">➤</button>
+        </div>
+
+        <footer>
+            Built for Kerala Cyber Law Assistant — Frontend & QA (Person D)
+        </footer>
+    </main>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
