@@ -1,0 +1,51 @@
+question_id,question_text,expected_category,golden_answer
+1,"I was scammed by a fake job offer in Kochi, what should I do?",Cyber Fraud,"File a complaint at Kerala Cyber Cell or through cybercrime.gov.in. Attach all emails, chats, and transaction proofs."
+2,What is the punishment for online identity theft?,Identity Theft,Section 66C of IT Act 2000: imprisonment up to 3 years and/or ?1 lakh fine.
+3,"Someone hacked my Instagram account, what can I do?",Account Hacking,"Report to Instagram, change passwords, and file a complaint under Sections 43 & 66 of IT Act."
+4,How can I report cybercrime in Kerala?,Reporting Procedure,Visit cybercrime.gov.in or the nearest District Cyber Cell; you can also dial 1930 for financial frauds.
+5,What is Section 67 of IT Act 2000?,Obscenity,Publishing or transmitting obscene material online: up to 3 years jail and ?5 lakh fine.
+6,What is the Kozhikode Cyber Cell contact number?,Cyber Cell Contact,Kozhikode Cyber Cell: +91-495-2723500 / cybercrime.gov.in.
+7,"Someone is blackmailing me with my private photos online, what should I do?",Cyber Harassment,Report to Cyber Cell under Section 66E (violation of privacy) and 67A (sexual content).
+8,Can I file a cyber complaint without visiting the police station?,Reporting Procedure,"Yes, use https://cybercrime.gov.in and submit digital evidence."
+9,What are common types of cybercrimes?,Awareness,"Phishing, identity theft, online fraud, hacking, cyberbullying, data breach, and obscenity."
+10,What is the punishment for sending obscene messages?,Obscenity,Section 67 IT Act: up to 3 years imprisonment + ?5 lakh fine.
+11,I received a phishing email from a fake bank site. What to do?,Phishing,Don’t click links; forward to reportphishing@apwg.org and file at cybercrime.gov.in.
+12,What is cyberstalking?,Harassment,Repeated online harassment or monitoring of someone’s activity; punishable under Section 354D IPC and 66A IT Act.
+13,What is the helpline number for financial fraud?,Helpline,Dial 1930 (Indian Cybercrime Helpline).
+14,How do I protect my social media accounts?,Awareness,"Enable 2FA, use strong passwords, avoid sharing OTP or personal data."
+15,Can minors be punished under IT Act?,Juvenile Law,"Yes, but tried under Juvenile Justice Act if below 18 years."
+16,What is Section 66D of IT Act?,Fraud & Impersonation,Cheating by personation using computer resources; up to 3 years jail + ?1 lakh fine.
+17,Is publishing fake news online a cybercrime?,Misinformation,"Yes, if it incites violence or defamation; liable under IPC and IT Act."
+18,What steps should I take if I lose money in an online trading scam?,Cyber Fraud,Call 1930 immediately and report on cybercrime.gov.in with transaction details.
+19,How can I verify a website is genuine?,Awareness,"Check https certificate, domain age, and avoid unofficial links."
+20,What is the penalty for tampering with computer data?,Data Tampering,Section 65 IT Act: up to 3 years imprisonment or ?2 lakh fine.
+21,What law protects digital personal data in India?,Data Protection,Digital Personal Data Protection Act 2023.
+22,How do I file a complaint for online loan app harassment?,Cyber Harassment,File through cybercrime.gov.in and contact local police under Sections 66E & 72 IT Act.
+23,What is doxxing?,Privacy Violation,Public sharing of private data without consent; punishable under Section 66E.
+24,Can I remain anonymous while filing a cybercrime complaint?,Procedure,"Yes, you can choose “Report anonymously” option on cybercrime.gov.in."
+25,What is ransomware?,Cyber Attack,Malware that encrypts data and demands ransom; report immediately to Cyber Cell.
+26,Who regulates cyber laws in India?,Governance,Ministry of Electronics and Information Technology (MeitY).
+27,What is Section 43 of IT Act?,Unauthorized Access,Penalizes unauthorized access to computer systems — fine up to ?1 crore.
+28,How do I contact the Ernakulam Cyber Cell?,Cyber Cell Contact,Ernakulam Cyber Cell: +91-484-2359200.
+29,Can I withdraw a cyber complaint?,Procedure,"Yes, before FIR registration with valid reason."
+30,What is the penalty for data theft by employees?,Data Theft,Section 72 IT Act: up to 2 years imprisonment + ?1 lakh fine.
+31,What is a fake OTP fraud?,Phishing,Trick to steal bank OTP; never share with anyone; report to 1930.
+32,What law covers cyber bullying of students?,Cyber Bullying,IPC Section 509 and IT Act Sections 66E & 67.
+33,My Facebook page was hacked and used for scams.,Account Hacking,Recover via Facebook support and file complaint under Section 66.
+34,What is digital signature fraud?,E-Signature Fraud,Section 73 IT Act — imprisonment up to 2 years + fine.
+35,What should I do if I get a sextortion threat?,Cyber Extortion,Don’t pay money; report to cybercrime.gov.in under Sections 67A and 384 IPC.
+36,What is the difference between phishing and vishing?,Awareness,Phishing = email/web fraud; Vishing = voice call fraud.
+37,How long does cyber complaint investigation take?,Procedure,Varies case-by-case; initial response within 7-10 days.
+38,What is the role of CERT-In?,National Agency,Handles cybersecurity incidents and threat response in India.
+39,Can sharing memes be a cyber offense?,Obscenity / Defamation,"Yes, if content is obscene or defamatory — liable under Sections 67 & 499 IPC."
+40,How do I complain about a fake Instagram profile?,Identity Fraud,Report through Instagram and Cyber Cell under Section 66C.
+41,What is Section 69 of IT Act?,Surveillance,Allows authorized government interception of data for security purposes.
+42,Can cyber crimes be reported after months?,Procedure,"Yes, provide timestamped evidence like emails or screenshots."
+43,What is the punishment for cyber terrorism?,Cyber Terrorism,Section 66F IT Act: life imprisonment.
+44,What is data retention policy under DPDP Act 2023?,Data Protection,Data must be deleted once purpose is fulfilled unless consent is renewed.
+45,Is cyber defamation a crime in India?,Defamation,"Yes, under Section 499 IPC and Section 66A IT Act (if abusive online)."
+46,Can companies be punished for data breach?,Corporate Liability,"Yes, under DPDP Act 2023 and IT Act Sections 43A & 72A."
+47,How can I check if a loan app is fake?,Awareness,Verify on RBI website; avoid apps asking for unnecessary permissions.
+48,What is Section 66B of IT Act?,Stolen Device,Receiving stolen computer resources; up to 3 years jail or ?1 lakh fine.
+49,How to complain about cyber crime in Kerala offline?,Procedure,Visit nearest Cyber Cell station with ID proof and evidence.
+50,What is the jurisdiction for cyber crimes in India?,Legal Jurisdiction,Any court where the offense originated or was felt can take cognizance (Section 75 IT Act).
