@@ -1,43 +1,47 @@
 import os
+import joblib
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI #, GoogleGenerativeAIEmbeddings
-# from langchain.chains.combine_documents import create_stuff_documents_chain
-# from langchain.chains import create_retrieval_chain
-# from langchain.prompts import ChatPromptTemplate
-# import joblib
-# from faiss import FAISS
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+from langchain_community.vectorstores import FAISS
 
-# Load environment variables
 load_dotenv()
-
-# Load the LLM
+intent_classifier = joblib.load("intent_classifier.pkl")
+embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+vectorstore = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
+retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
 
-# System prompt for the bot
 SYSTEM_PROMPT = """
-You are a helpful and empathetic AI assistant designed to answer questions based on the provided context.
-
-IMPORTANT RULES:
-1. You are NOT a lawyer, financial advisor, or medical professional. Do not provide legal, financial, or medical advice.
-2. You MUST base your answers only on the context provided. If the context doesn't contain the answer, say "I don't have enough information to answer this question."
-3. Always be polite and empathetic in your responses.
-4. Do not make up information or speculate beyond what is in the context.
-
-Your response should be concise, accurate, and helpful.
+You are Cy-Bot, a calm and empathetic Kerala Cyber Law Assistant.
+...
 """
-
-DISCLAIMER_TEXT = "Note: This information is provided for educational purposes only and should not be considered as professional advice."
-
+def predict_intent(query: str) -> str:
+    try:
+        return intent_classifier.predict([query])[0]
+    except Exception as e:
+        return f"IntentError: {e}"
 def get_bot_response(user_question: str) -> str:
-    """
-    Dummy function for the frontend to connect to.
-    This will be replaced with the actual implementation in Day 2.
-    """
-    print(f"Received query: {user_question}")
-    return f"DUMMY RESPONSE for: '{user_question}'. {DISCLAIMER_TEXT}"
+    try:
+        # 1️⃣ Classify
+        intent = predict_intent(user_question)
 
-# Test the function
+        # 2️⃣ Retrieve context (fixed)
+        docs = retriever.invoke(user_question)
+        context = "\n\n".join([d.page_content for d in docs]) or "No relevant context found."
+
+        # 3️⃣ Construct prompt
+        prompt = f"{SYSTEM_PROMPT}\n\nIntent: {intent}\n\nContext:\n{context}\n\nUser Question:\n{user_question}"
+
+        # 4️⃣ Generate response
+        response = llm.invoke(prompt)
+        return response.content
+
+    except Exception as e:
+        return f"[Backend Error] {str(e)}"
 if __name__ == "__main__":
-    test_question = "What is the return policy?"
-    response = get_bot_response(test_question)
-    print(response)
+    print("✅ Cy-Bot backend loaded successfully — type a question below.")
+    while True:
+        q = input("\nYou: ")
+        if q.lower() in ["exit", "quit"]:
+            break
+        print("Cy-Bot:", get_bot_response(q))
