@@ -6,7 +6,7 @@ app.secret_key = "cyberlaw_secret"
 
 @app.route("/")
 def index():
-    # Clear chat history automatically on refresh
+    # Clear chat on refresh
     session.pop("history", None)
     session["history"] = []
     return render_template("index.html", chat_history=session["history"])
@@ -16,12 +16,13 @@ def get_response():
     user_msg = request.json["message"]
     bot_msg = get_bot_response(user_msg)
 
-    chat_entry = {"user": user_msg, "bot": bot_msg}
+    entry = {"user": user_msg, "bot": bot_msg}
     history = session.get("history", [])
-    history.append(chat_entry)
+    history.append(entry)
     session["history"] = history
 
     return jsonify({"bot": bot_msg})
+
 @app.route("/clear", methods=["POST"])
 def clear_chat():
     session.pop("history", None)
